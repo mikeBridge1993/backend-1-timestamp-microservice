@@ -3,6 +3,7 @@ const moment = require('moment');
 const port = process.env.PORT || 3000;
 
 var app = express();
+app.use(express.static('public'));
 
 app.get('/:id', (req, res) =>{
     var dates = req.params.id;
